@@ -31,11 +31,11 @@
         }
 
         .profile-pic {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
         .profile-pic img {
@@ -57,6 +57,31 @@
             margin: 0;
             font-size: 1.2em;
             color: #cccccc;
+        }
+        /* Social Links and About Styles */
+        .header-right {
+            display: flex;
+            align-items: center;
+            /* Move slightly to the left */
+            margin-left: -20px;
+        }
+
+        .header-right a {
+            color: #000000; /* Black text color */
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a:hover {
+            color: #555555; /* Dark gray on hover */
+        }
+
+        .header-right .about-link {
+            margin-right: 10px; /* Space between 'About' and icons */
+            font-weight: bold;
         }
 
         /* Social Links Styles */
@@ -90,7 +115,7 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 10px;
         }
 
         nav ul li a {
@@ -176,6 +201,32 @@
             bottom: 0;
             width: 100%;
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-left, .header-right {
+                flex-basis: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+                justify-content: center;
+            }
+
+            .profile-pic {
+                margin: 0 auto 5px;
+            }
+
+            .header-right {
+                margin-left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -189,19 +240,12 @@
                 <h2>Data Scientist</h2>
             </div>
         </div>
-        <div class="social-links">
+        <div class="header-right"> <!--social-links-->
+            <a href="https://github.com/snnmst" class="about-link" >about</a>
             <a href="https://github.com/snnmst" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/sinanmustu" target="_blank"><i class="fab fa-linkedin"></i></a>
             <!-- Add more icons as needed -->
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <div class="container">
