@@ -170,8 +170,8 @@
 
         .grid-item img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
         }
 
         .grid-item h3 {
@@ -184,6 +184,9 @@
             margin: 15px;
             font-size: 1em;
             color: #cccccc;
+            max-height: 4.5em; /* Limit the height to approximately 3 lines */
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .grid-item:hover {
